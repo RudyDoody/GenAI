@@ -17,49 +17,49 @@ B35 = sum(r["benefit"][1] for r in INC if r["id"] not in CUT35)
 CFO_Q = [
     ("Your pessimistic case loses money. Why should I approve?",
      f"Because we never spend it all at once. H1 commits about Rs 21 lakh; Stage-gate 1 at M6 stops anything that is not working. The programme breaks even "
-     f"at {BS['total'] / BEN[1]:.0%} of base-case benefits, and the two biggest drivers (Agent hours, quote margin) are measurable from month 3.", "M3", "ROI_Model.xlsx > Programme"),
+     f"at {BS['total'] / BEN[1]:.0%} of base-case benefits, and the two biggest drivers (Agent hours, quote margin) are measurable from month 3.", "{M3}", "ROI_Model.xlsx > Programme"),
     ("These benefits are all assumptions. Which one would you bet your job on?",
      "The support Agent: we can count tickets today, so the baseline is real from M1 and hours saved are visible by M4. "
-     f"It breaks even at {RR['UC04']['breakeven_driver']:.0f} hours a year against a base case of {RR['UC04']['vols'][1]:,}.", "M2/M3", "ROI_Model.xlsx > ROI_by_UseCase"),
+     f"It breaks even at {RR['UC04']['breakeven_driver']:.0f} hours a year against a base case of {RR['UC04']['vols'][1]:,}.", "{M2}/{M3}", "ROI_Model.xlsx > ROI_by_UseCase"),
     ("Why not just match the 10% price cut?",
      f"A 10% cut on Rs {facts.CO['revenue_cr']:.0f} crore is Rs {facts.CO['revenue_cr'] * 0.1:.0f} crore a year, more than our EBITDA (about Rs "
-     f"{facts.CO['revenue_cr'] * facts.CO['ebitda_margin']:.1f} crore, assumed). We protect at-risk accounts with value-engineering instead.", "M1/M3", "Shock_E_Response"),
+     f"{facts.CO['revenue_cr'] * facts.CO['ebitda_margin']:.1f} crore, assumed). We protect at-risk accounts with value-engineering instead.", "{M1}/{M3}", "Shock_E_Response"),
     ("A third of the budget is 'hidden costs'. Isn't that waste?",
      "It is the cost of making the other two-thirds work. With low digital skills, untrained users and unreviewed outputs are where AI programmes fail "
-     "and where regulatory risk comes from.", "M3", "Roadmap_18_Month.docx s.2"),
+     "and where regulatory risk comes from.", "{M3}", "Roadmap_18_Month.docx s.2"),
     ("Licences are priced in dollars. What if the rupee falls?",
      "The pessimistic budget assumes +20% on licences and +25% on implementation. It goes Rs 1.95 lakh over and the cut list closes it "
-     "(defer the Tamil voice assistant first).", "M3", "Finance_Budget_and_Peer.xlsx"),
+     "(defer the Tamil voice assistant first).", "{M3}", "Finance_Budget_and_Peer.xlsx"),
     ("How will you know a new account came from AI marketing?",
-     "Tracked links and campaign codes on every touchpoint, a hold-out group of prospects who get no emails, and we count only accounts whose first touch was the campaign.", "M1", "Marketing_Pack.docx"),
+     "Tracked links and campaign codes on every touchpoint, a hold-out group of prospects who get no emails, and we count only accounts whose first touch was the campaign.", "{M1}", "Marketing_Pack.docx"),
     ("If the board cuts the budget to Rs 35 lakh after another weak quarter, what goes?",
      f"Defer UC02, UC09, UC11 and UC13 to FY29: spend about Rs {C35:.1f} lakh, base benefit about Rs {B35:.0f} lakh. Studio launches with 2D variants and quotes, without 3D. "
-     "Training, oversight and security are never cut.", "M3/M4", "Roadmap_18_Month.docx"),
+     "Training, oversight and security are never cut.", "{M3}/{M4}", "Roadmap_18_Month.docx"),
     ("Payback?", f"Agent month {RR['UC04']['payback_month'][1]}, costing assistant month {RR['UC15']['payback_month'][1]}, Studio month "
-     f"{RR['UC17']['payback_month'][1]} (base case). HR screening does not pay back in 18 months; it is there for fairness and quality of hire.", "M3", "ROI_Model.xlsx"),
+     f"{RR['UC17']['payback_month'][1]} (base case). HR screening does not pay back in 18 months; it is there for fairness and quality of hire.", "{M3}", "ROI_Model.xlsx"),
 ]
 REG_Q = [
     ("You are B2B. Does the DPDP Act even apply to you?",
-     "Yes. Buyer staff, candidates and our own employees are data principals. We map every obligation (s.4-9, 16) and plan as if the 2025 Rules apply from M1.", "M2", "Governance_Pack.docx s.5"),
+     "Yes. Buyer staff, candidates and our own employees are data principals. We map every obligation (s.4-9, 16) and plan as if the 2025 Rules apply from M1.", "{M2}", "Governance_Pack.docx s.5"),
     ("How does a buyer know they are talking to a bot?",
-     "The first line of every chat says it is an AI assistant and that a person reviews escalations, in line with EU AI Act Art. 50 for our EU users. 'Talk to a person' is a starter button.", "M2", "Agent_Instructions.md"),
+     "The first line of every chat says it is an AI assistant and that a person reviews escalations, in line with EU AI Act Art. 50 for our EU users. 'Talk to a person' is a starter button.", "{M2}", "Agent_Instructions.md"),
     ("Prove your hiring AI does not discriminate.",
      "It is not live until H3 and is Tier 3. Before first use: planted-pair test (identical CVs differing only in gender, age, region or a disability marker) must show no score gap; "
-     "names, photos and addresses are removed; no automatic rejection; every decision logged and reviewed by HR.", "M2", "Governance_Pack.docx; Risk R10"),
+     "names, photos and addresses are removed; no automatic rejection; every decision logged and reviewed by HR.", "{M2}", "Governance_Pack.docx; Risk R10"),
     ("Where is buyer data processed? Any cross-border transfer?",
-     "Vendor-location register; data-processing agreements with no-training clauses; transfers permitted under s.16 unless a country is restricted; EU hosting option for Studio.", "M2", "Governance_Pack.docx"),
+     "Vendor-location register; data-processing agreements with no-training clauses; transfers permitted under s.16 unless a country is restricted; EU hosting option for Studio.", "{M2}", "Governance_Pack.docx"),
     ("An employee leaks customer data into a free AI tool. What happens?",
-     "Report in 1 hour; contain in 4; assess in 24; CERT-In within 6 hours if it is a reportable cyber incident; intimate the Data Protection Board and affected persons; no public blame on individuals.", "M2", "Governance_Pack.docx s.7"),
-    ("You make kidswear. Do you process children's data?", "No. We are B2B; we never collect data on children. Kidswear safety questions go straight to QA and the Director.", "M2", "Agent test T18"),
+     "Report in 1 hour; contain in 4; assess in 24; CERT-In within 6 hours if it is a reportable cyber incident; intimate the Data Protection Board and affected persons; no public blame on individuals.", "{M2}", "Governance_Pack.docx s.7"),
+    ("You make kidswear. Do you process children's data?", "No. We are B2B; we never collect data on children. Kidswear safety questions go straight to QA and the Director.", "{M2}", "Agent test T18"),
     ("Who is accountable if your compliance assistant tells an EU buyer something false?",
-     "The Compliance Manager, who signs every outgoing answer. The assistant only drafts from source documents and is banned from using the word 'compliant' as a claim.", "M2", "Risk R07"),
-    ("Do you monitor workers with AI?", "No. The policy bans AI productivity monitoring without an approved, notified purpose, and worker representatives are consulted before floor tools.", "M2", "AUP s.1.4"),
+     "The Compliance Manager, who signs every outgoing answer. The assistant only drafts from source documents and is banned from using the word 'compliant' as a claim.", "{M2}", "Risk R07"),
+    ("Do you monitor workers with AI?", "No. The policy bans AI productivity monitoring without an approved, notified purpose, and worker representatives are consulted before floor tools.", "{M2}", "AUP s.1.4"),
 ]
 GUEST_Q = [
-    ("EU buyers will not approve a garment from a 3D picture.", "They won't, and we don't ask them to. The 3D preview removes a round of physical samples; the approved sample is still physical.", "M1"),
-    ("Tiruppur SMEs failed with ERP. Why will AI be different?", "We start with one task per person, in Tamil, with peer champions and stage-gates that stop failures early.", "M4"),
-    ("Won't Studio leak one brand's designs to another?", "Per-buyer isolation and no training on buyer designs without written consent; it is in the contract and the policy.", "M2"),
-    ("S.P. Apparels is ten times your size. How do you compete?", "Not on scale. On speed, data and service: 10-day samples, 24-hour costing and traceability sheets.", "M3"),
+    ("EU buyers will not approve a garment from a 3D picture.", "They won't, and we don't ask them to. The 3D preview removes a round of physical samples; the approved sample is still physical.", "{M1}"),
+    ("Tiruppur SMEs failed with ERP. Why will AI be different?", "We start with one task per person, in Tamil, with peer champions and stage-gates that stop failures early.", "{M4}"),
+    ("Won't Studio leak one brand's designs to another?", "Per-buyer isolation and no training on buyer designs without written consent; it is in the contract and the policy.", "{M2}"),
+    ("S.P. Apparels is ten times your size. How do you compete?", "Not on scale. On speed, data and service: 10-day samples, 24-hour costing and traceability sheets.", "{M3}"),
 ]
 
 VIVA = [

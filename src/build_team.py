@@ -58,13 +58,13 @@ CHECKLIST = [
 ]
 
 AI_REGISTER = [
-    ("P1", "Dataset schema, cluster naming, personas, emails, ad copy", "5", "Persona statistic; 'guaranteed compliance' claim", "M1"),
-    ("P2", "Agent instructions, KB drafting, red-team tests", "3", "'Goodwill credit up to EUR 200'", "M2"),
-    ("P3", "Annual-report summary, scenario ranges", "2", "'Virtually debt-free'; mixed standalone/consolidated", "M3"),
-    ("P4", "Method choice, DAX, option scoring", "3", "'Substitute yarn and relabel later'", "M4"),
-    ("P5", "Deck outline, total-cost numbers, comparison", "3", "Inflated hidden costs; named competitor", "M1"),
-    ("Governance", "AUP, DPDP mapping, risk register", "3", "'DPDP doesn't apply to B2B'", "M2"),
-    ("Change", "ADKAR plan", "1", "AI-usage scores in appraisals", "M2/M4"),
+    ("P1", "Dataset schema, cluster naming, personas, emails, ad copy", "5", "Persona statistic; 'guaranteed compliance' claim", "{M1}"),
+    ("P2", "Agent instructions, KB drafting, red-team tests", "3", "'Goodwill credit up to EUR 200'", "{M2}"),
+    ("P3", "Annual-report summary, scenario ranges", "2", "'Virtually debt-free'; mixed standalone/consolidated", "{M3}"),
+    ("P4", "Method choice, DAX, option scoring", "3", "'Substitute yarn and relabel later'", "{M4}"),
+    ("P5", "Deck outline, total-cost numbers, comparison", "3", "Inflated hidden costs; named competitor", "{M1}"),
+    ("Governance", "AUP, DPDP mapping, risk register", "3", "'DPDP doesn't apply to B2B'", "{M2}"),
+    ("Change", "ADKAR plan", "1", "AI-usage scores in appraisals", "{M2}/{M4}"),
 ]
 
 
@@ -75,16 +75,16 @@ def build():
     d.table(["ID", "Name", "Role", "Owns", "Sessions"], [(t["id"], t["name"], t["role"], t["owns"], t["sessions"]) for t in facts.TEAM],
             widths=[1.0, 2.2, 4.8, 7.4, 1.6], size=8.5)
     d.p(facts.CEO_NOTE)
-    d.callout("Replace 'Member 1-4' with your names in src/facts.py (TEAM) and run 'python src/build_all.py' to update every document and deck at once. "
+    d.callout("To swap roles, swap the names in src/facts.py (TEAM) and run 'python src/build_all.py'; every document and deck updates at once. "
               "Each member must be able to explain every file they own (individual viva).", kind="info", title="Names")
     d.h1("2. RACI")
-    d.table(["Deliverable", "M1", "M2", "M3", "M4"], RACI_ROWS, widths=[9.0, 2.0, 2.0, 2.0, 2.0], size=8.5)
+    d.table(["Deliverable", "{M1}", "{M2}", "{M3}", "{M4}"], RACI_ROWS, widths=[9.0, 2.0, 2.0, 2.0, 2.0], size=8.5)
     d.p("R = does the work, A = accountable (signs off), C = consulted, I = informed.", size=8.5, italic=True)
     d.h1("3. Four-week workplan")
     d.table(["Week", "Sessions", "Work", "Output"], PLAN, widths=[1.6, 2.2, 9.6, 3.6], size=8.5)
     d.h1("4. Weekly stand-up log (10 minutes with the instructor)")
     d.table(["Week", "Done since last stand-up (each member)", "Next week", "Blockers / help needed"], [
-        ("1 (example)", "M1: dataset + segments; M2: KB outline; M3: peer chosen (S.P. Apparels); M4: value chain + 2x2", "Personas; Agent build; AR summary; forecast data",
+        ("1 (example)", "{M1}: dataset + segments; {M2}: KB outline; {M3}: peer chosen (S.P. Apparels); {M4}: value chain + 2x2", "Personas; Agent build; AR summary; forecast data",
          "Which no-code Agent tool the class may use"),
         ("2", "", "", ""), ("3", "", "", ""), ("4", "", "", ""),
     ], widths=[2.0, 7.0, 4.4, 3.6], size=8.5)

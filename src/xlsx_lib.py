@@ -3,6 +3,8 @@ from openpyxl.comments import Comment
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
+import facts
+
 FONT = "Arial"
 HEAD_FILL = PatternFill("solid", fgColor="1F2A5A")
 SUB_FILL = PatternFill("solid", fgColor="E8ECF5")
@@ -42,6 +44,7 @@ def header(ws, row, headers, col=1, height=30):
 
 def cell(ws, row, col, value, fmt=None, bold=False, color=None, fill=None, wrap=False, comment=None, italic=False,
          size=10, align=None):
+    value = facts.sub_names(value)
     c = ws.cell(row, col, value)
     if color is None:
         color = BLUE if (value is not None and not (isinstance(value, str) and value.startswith("=")) and

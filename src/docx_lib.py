@@ -59,7 +59,7 @@ def _field(run, instr):
 
 def add_runs(par, text, size=None, color=None, italic=False):
     """Supports **bold** inline markup; strips markdown backticks."""
-    text = text.replace("`", "")
+    text = facts.sub_names(text).replace("`", "")
     parts = re.split(r"(\*\*[^*]+\*\*)", text)
     for part in parts:
         if not part:
@@ -136,13 +136,13 @@ class Doc:
 
     # ------------------------------------------------------------ blocks
     def h1(self, t):
-        self.d.add_heading(t, 1)
+        self.d.add_heading(facts.sub_names(t), 1)
 
     def h2(self, t):
-        self.d.add_heading(t, 2)
+        self.d.add_heading(facts.sub_names(t), 2)
 
     def h3(self, t):
-        self.d.add_heading(t, 3)
+        self.d.add_heading(facts.sub_names(t), 3)
 
     def p(self, t, size=None, italic=False, color=None, align=None, after=None):
         par = self.d.add_paragraph()

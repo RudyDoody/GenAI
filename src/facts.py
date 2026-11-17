@@ -16,17 +16,27 @@ RIVAL = "KnitSphere Apparels"  # fictional rival, Tiruppur
 TODAY = "17 November 2026"
 
 # ---------------------------------------------------------------- team ----
-# Placeholder names - replace with your real names in ONE place (here).
+# Team names: change here ONCE; every document, workbook and deck substitutes them for "Member N" / "{MN}".
 TEAM = [
-    {"id": "M1", "name": "Member 1", "role": "Chief Marketing Officer (CMO) + Sales lead",
+    {"id": "M1", "name": "Rudransh Bajpai", "role": "Chief Marketing Officer (CMO) + Sales lead",
      "owns": "P1 Marketing pack, P5 B2B proposal deck", "sessions": "4-5"},
-    {"id": "M2", "name": "Member 2", "role": "Chief Customer Officer (CCO) + Chief AI & Risk Officer",
+    {"id": "M2", "name": "Het Laheri", "role": "Chief Customer Officer (CCO) + Chief AI & Risk Officer",
      "owns": "P2 Support Agent & testing, Governance pack, ADKAR change plan", "sessions": "6, 11"},
-    {"id": "M3", "name": "Member 3", "role": "Chief Financial Officer (CFO)",
+    {"id": "M3", "name": "Shrey Doda", "role": "Chief Financial Officer (CFO)",
      "owns": "P3 Peer annual-report summary, 3-scenario budget, ROI model", "sessions": "7, 10"},
-    {"id": "M4", "name": "Member 4", "role": "Chief Operating Officer (COO)",
+    {"id": "M4", "name": "Anushka Baniya", "role": "Chief Operating Officer (COO)",
      "owns": "P4 Demand forecast + DAX variance, supply-disruption decision matrix, roadmap integration", "sessions": "8-9"},
 ]
+def sub_names(text):
+    """'Member 1' -> full name, '{M1}' -> first name. Applied by docx_lib, xlsx_lib and the deck builders."""
+    if not isinstance(text, str):
+        return text
+    for t in TEAM:
+        k = t["id"][1]
+        text = text.replace(f"Member {k}", t["name"]).replace("{" + t["id"] + "}", t["name"].split()[0])
+    return text
+
+
 CEO_NOTE = ("4-person team: the CEO role (18-month roadmap and board pitch) is shared. "
             "M4 integrates the roadmap; M1 anchors the pitch narrative; every member presents their own function.")
 

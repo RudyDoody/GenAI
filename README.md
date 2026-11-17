@@ -19,14 +19,14 @@ our own personalisation portal with guardrails ("WeaveWorks Studio"). Compliance
 
 ## Team roles
 
-Placeholder names are used throughout. Change them once in `src/facts.py` and rebuild (see the last section).
+Names are set once in `src/facts.py` (`TEAM`). To swap roles, swap the names there and rebuild (see the last section).
 
 | Member | Role | Owns |
 |---|---|---|
-| Member 1 | CMO + Sales lead | P1 Marketing, P5 B2B proposal deck, Shock E response |
-| Member 2 | CCO + Chief AI & Risk Officer | P2 Support Agent, Governance pack, ADKAR plan |
-| Member 3 | CFO | P3 Peer annual-report summary + budget, ROI model |
-| Member 4 | COO | P4 Forecast + DAX + decision matrix, roadmap integration |
+| Rudransh Bajpai | CMO + Sales lead | P1 Marketing, P5 B2B proposal deck, Shock E response |
+| Het Laheri | CCO + Chief AI & Risk Officer | P2 Support Agent, Governance pack, ADKAR plan |
+| Shrey Doda | CFO | P3 Peer annual-report summary + budget, ROI model |
+| Anushka Baniya | COO | P4 Forecast + DAX + decision matrix, roadmap integration |
 
 ## Where everything is (brief → file)
 
@@ -54,19 +54,18 @@ highlighted **"Rejected AI output"** box for the viva.
 
 ## What the team still has to do (cannot be done from this repository)
 
-1. **Put in your names.** Edit `TEAM` in `src/facts.py` and rebuild, or edit the documents by hand.
-2. **Build the Agent** in the no-code tool your class uses (Copilot Studio, Custom GPT, Gemini Gem or Botpress).
+1. **Build the Agent** in the no-code tool your class uses (Copilot Studio, Custom GPT, Gemini Gem or Botpress).
    Follow `Agent_Build_Pack.docx` §1 and paste `Agent_Instructions.md`. Then run all 25 tests in `Agent_Test_Suite.xlsx`
    and record the results. The go-live gate is computed automatically.
-3. **Rebuild the 3 creatives in Canva.** The PNGs in `P1_Marketing/creatives/` are exact-size mock-ups; the spec (sizes, hex colours, copy) is in the Marketing Pack §5.
-4. **Verify the peer figures.** Open S.P. Apparels' official Annual Report 2024-25 PDF and fill the "Page ref" column in
+2. **Rebuild the 3 creatives in Canva.** The PNGs in `P1_Marketing/creatives/` are exact-size mock-ups; the spec (sizes, hex colours, copy) is in the Marketing Pack §5.
+3. **Verify the peer figures.** Open S.P. Apparels' official Annual Report 2024-25 PDF and fill the "Page ref" column in
    `Finance_Budget_and_Peer.xlsx > Verification`. Our figures were checked against filings, investor materials and
    earnings-call summaries, but not yet against the AR PDF itself.
-5. **Build the Power BI page** from `P4_Operations/powerbi_data/*.csv` using `DAX_Measures.md`. A .pbix cannot be generated here.
-6. **Record backup videos** of both live demos the day before the pitch.
-7. **Prompt logs:** the raw outputs were generated with Claude when this pack was drafted. If your instructor wants logs
+4. **Build the Power BI page** from `P4_Operations/powerbi_data/*.csv` using `DAX_Measures.md`. A .pbix cannot be generated here.
+5. **Record backup videos** of both live demos the day before the pitch.
+6. **Prompt logs:** the raw outputs were generated with Claude when this pack was drafted. If your instructor wants logs
    from your own tools, re-run the prompts (written out in full) and keep the edit rationale.
-8. Fill in the weekly stand-up log (Team Charter §4).
+7. Fill in the weekly stand-up log (Team Charter §4).
 
 ## Ground rules: how we comply
 

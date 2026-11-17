@@ -17,8 +17,32 @@ const THEME = {
 const HEX = { indigo: "1F2A5A", teal: "0F7C78", marigold: "E9A23B", ink: "151515", ink2: "52514E",
   grid: "E4E3DE", light: "F3F4F8", blue: "2A78D6", orange: "EB6834", aqua: "1BAF7A", violet: "6250D6", red: "E34948", white: "FFFFFF" };
 
+const TEAM = require("../data/facts.json").TEAM;
+// 'Member 1' -> full name, '{M1}' -> first name (same rule as facts.sub_names in Python)
+function subNames(x) {
+  if (typeof x === "string") {
+    for (const t of TEAM) {
+      const k = t.id[1];
+      x = x.split(`Member ${k}`).join(t.name).split(`{${t.id}}`).join(t.name.split(" ")[0]);
+    }
+    return x;
+  }
+  if (Array.isArray(x)) return x.map(subNames);
+  if (x && typeof x === "object" && "text" in x) return Object.assign({}, x, { text: subNames(x.text) });
+  return x;
+}
+
 function newDeck(title) {
   const pres = new pptxgen();
+  const addSlide = pres.addSlide.bind(pres);
+  pres.addSlide = (opts) => {
+    const s = addSlide(opts);
+    const [t, n, tb] = [s.addText.bind(s), s.addNotes.bind(s), s.addTable.bind(s)];
+    s.addText = (txt, o) => t(subNames(txt), o);
+    s.addNotes = (txt) => n(subNames(txt));
+    s.addTable = (rows, o) => tb(subNames(rows), o);
+    return s;
+  };
   pres.layout = "LAYOUT_WIDE"; // 13.33 x 7.5
   pres.theme = { headFontFace: THEME.headFontFace, bodyFontFace: THEME.bodyFontFace };
   pres.title = title;
@@ -80,4 +104,4 @@ function text(slide, t, o) {
   slide.addText(t, Object.assign({ isTextBox: true, margin: 0, fontSize: 14, color: HEX.ink, valign: "top" }, o));
 }
 
-module.exports = { THEME, HEX, newDeck, icon, circleIcon, card, text };
+module.exports = { THEME, HEX, newDeck, icon, circleIcon, card, text, subNames };
