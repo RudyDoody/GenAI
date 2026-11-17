@@ -1,0 +1,97 @@
+month_start,product_line,forecast_type,forecast_pieces
+2025-10-01,Basic & fashion T-shirts,Backtest,122131
+2025-11-01,Basic & fashion T-shirts,Backtest,107125
+2025-12-01,Basic & fashion T-shirts,Backtest,108994
+2026-01-01,Basic & fashion T-shirts,Backtest,144490
+2026-02-01,Basic & fashion T-shirts,Backtest,139585
+2026-03-01,Basic & fashion T-shirts,Backtest,149095
+2026-04-01,Basic & fashion T-shirts,Backtest,142680
+2026-05-01,Basic & fashion T-shirts,Backtest,126788
+2026-06-01,Basic & fashion T-shirts,Backtest,113320
+2026-07-01,Basic & fashion T-shirts,Backtest,122974
+2026-08-01,Basic & fashion T-shirts,Backtest,166248
+2026-09-01,Basic & fashion T-shirts,Backtest,157005
+2026-10-01,Basic & fashion T-shirts,Forward,128757
+2026-11-01,Basic & fashion T-shirts,Forward,113589
+2026-12-01,Basic & fashion T-shirts,Forward,112764
+2027-01-01,Basic & fashion T-shirts,Forward,153211
+2027-02-01,Basic & fashion T-shirts,Forward,146006
+2027-03-01,Basic & fashion T-shirts,Forward,162544
+2027-04-01,Basic & fashion T-shirts,Forward,144158
+2027-05-01,Basic & fashion T-shirts,Forward,128641
+2027-06-01,Basic & fashion T-shirts,Forward,118159
+2027-07-01,Basic & fashion T-shirts,Forward,143080
+2027-08-01,Basic & fashion T-shirts,Forward,172926
+2027-09-01,Basic & fashion T-shirts,Forward,161893
+2025-10-01,Polos,Backtest,45050
+2025-11-01,Polos,Backtest,39033
+2025-12-01,Polos,Backtest,39879
+2026-01-01,Polos,Backtest,55025
+2026-02-01,Polos,Backtest,56085
+2026-03-01,Polos,Backtest,59061
+2026-04-01,Polos,Backtest,60827
+2026-05-01,Polos,Backtest,43807
+2026-06-01,Polos,Backtest,42870
+2026-07-01,Polos,Backtest,51874
+2026-08-01,Polos,Backtest,61304
+2026-09-01,Polos,Backtest,60326
+2026-10-01,Polos,Forward,44315
+2026-11-01,Polos,Forward,39313
+2026-12-01,Polos,Forward,41265
+2027-01-01,Polos,Forward,54763
+2027-02-01,Polos,Forward,55658
+2027-03-01,Polos,Forward,58831
+2027-04-01,Polos,Forward,57938
+2027-05-01,Polos,Forward,44223
+2027-06-01,Polos,Forward,43485
+2027-07-01,Polos,Forward,52865
+2027-08-01,Polos,Forward,60501
+2027-09-01,Polos,Forward,59088
+2025-10-01,Kidswear,Backtest,73002
+2025-11-01,Kidswear,Backtest,63974
+2025-12-01,Kidswear,Backtest,65750
+2026-01-01,Kidswear,Backtest,86742
+2026-02-01,Kidswear,Backtest,93279
+2026-03-01,Kidswear,Backtest,91036
+2026-04-01,Kidswear,Backtest,87449
+2026-05-01,Kidswear,Backtest,79317
+2026-06-01,Kidswear,Backtest,65332
+2026-07-01,Kidswear,Backtest,93059
+2026-08-01,Kidswear,Backtest,99805
+2026-09-01,Kidswear,Backtest,92801
+2026-10-01,Kidswear,Forward,77958
+2026-11-01,Kidswear,Forward,67350
+2026-12-01,Kidswear,Forward,69140
+2027-01-01,Kidswear,Forward,90469
+2027-02-01,Kidswear,Forward,101631
+2027-03-01,Kidswear,Forward,97610
+2027-04-01,Kidswear,Forward,91318
+2027-05-01,Kidswear,Forward,75512
+2027-06-01,Kidswear,Forward,67465
+2027-07-01,Kidswear,Forward,99469
+2027-08-01,Kidswear,Forward,107633
+2027-09-01,Kidswear,Forward,100614
+2025-10-01,Loungewear,Backtest,49023
+2025-11-01,Loungewear,Backtest,37322
+2025-12-01,Loungewear,Backtest,39121
+2026-01-01,Loungewear,Backtest,52464
+2026-02-01,Loungewear,Backtest,53319
+2026-03-01,Loungewear,Backtest,49516
+2026-04-01,Loungewear,Backtest,47709
+2026-05-01,Loungewear,Backtest,44266
+2026-06-01,Loungewear,Backtest,37405
+2026-07-01,Loungewear,Backtest,49621
+2026-08-01,Loungewear,Backtest,62545
+2026-09-01,Loungewear,Backtest,60536
+2026-10-01,Loungewear,Forward,56723
+2026-11-01,Loungewear,Forward,42176
+2026-12-01,Loungewear,Forward,45333
+2027-01-01,Loungewear,Forward,58909
+2027-02-01,Loungewear,Forward,62793
+2027-03-01,Loungewear,Forward,58867
+2027-04-01,Loungewear,Forward,57949
+2027-05-01,Loungewear,Forward,48249
+2027-06-01,Loungewear,Forward,43911
+2027-07-01,Loungewear,Forward,55122
+2027-08-01,Loungewear,Forward,73210
+2027-09-01,Loungewear,Forward,69612
