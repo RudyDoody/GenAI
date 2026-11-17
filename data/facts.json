@@ -1,0 +1,693 @@
+{
+ "CO": {
+  "revenue_cr": 120.0,
+  "ebitda_margin": 0.09,
+  "pat_margin": 0.035,
+  "employees": 1150,
+  "production_staff": 940,
+  "merchandisers": 28,
+  "designers": 9,
+  "sales_cs_staff": 14,
+  "qa_compliance_staff": 32,
+  "pieces_per_year_mn": 3.8,
+  "capacity_pcs_per_month": 360000,
+  "avg_fob_inr": 316,
+  "eur_inr": 100.0,
+  "export_share": 0.88,
+  "eu_share_of_exports": 0.78,
+  "active_buyers": 38,
+  "sampling_days_now": 21,
+  "sampling_days_target": 10,
+  "buyer_queries_per_month": 1600,
+  "repetitive_query_share": 0.42,
+  "rfqs_per_year": 150,
+  "rfq_win_rate": 0.18,
+  "rework_rate": 0.045,
+  "annual_samples": 3600,
+  "attrition_hires_per_year": 300,
+  "forecast_mape_now": 0.24
+ },
+ "TEAM": [
+  {
+   "id": "M1",
+   "name": "Member 1",
+   "role": "Chief Marketing Officer (CMO) + Sales lead",
+   "owns": "P1 Marketing pack, P5 B2B proposal deck",
+   "sessions": "4-5"
+  },
+  {
+   "id": "M2",
+   "name": "Member 2",
+   "role": "Chief Customer Officer (CCO) + Chief AI & Risk Officer",
+   "owns": "P2 Support Agent & testing, Governance pack, ADKAR change plan",
+   "sessions": "6, 11"
+  },
+  {
+   "id": "M3",
+   "name": "Member 3",
+   "role": "Chief Financial Officer (CFO)",
+   "owns": "P3 Peer annual-report summary, 3-scenario budget, ROI model",
+   "sessions": "7, 10"
+  },
+  {
+   "id": "M4",
+   "name": "Member 4",
+   "role": "Chief Operating Officer (COO)",
+   "owns": "P4 Demand forecast + DAX variance, supply-disruption decision matrix, roadmap integration",
+   "sessions": "8-9"
+  }
+ ],
+ "SEGMENT_NAMES": {
+  "A": "Sustainable mid-market brands",
+  "B": "Volume value retailers",
+  "C": "Agile DTC & emerging labels"
+ },
+ "SEGMENT_REV_SHARE": {
+  "A": 0.48,
+  "B": 0.37,
+  "C": 0.15
+ },
+ "BUDGET_LAKH": 50.0,
+ "HIDDEN_COSTS": [
+  [
+   "Training & change management (ADKAR, AI champions, Tamil-language sessions)",
+   5.0
+  ],
+  [
+   "Human oversight (part-time AI governance lead + output reviewers)",
+   4.0
+  ],
+  [
+   "Security, DPDP/GDPR legal review, vendor due diligence, annual AI audit",
+   2.0
+  ]
+ ],
+ "CONTINGENCY_LAKH": 4.5,
+ "USE_CASES": [
+  [
+   "UC01",
+   "Gen-AI design variants & tech-pack drafting",
+   "Design",
+   7,
+   6,
+   null,
+   "H2"
+  ],
+  [
+   "UC02",
+   "Virtual 3D sampling with AI renders",
+   "Design / Sales",
+   9,
+   5,
+   null,
+   "H2"
+  ],
+  [
+   "UC03",
+   "Buyer segmentation & personalised outreach",
+   "Marketing",
+   7,
+   8,
+   "P1",
+   "H1"
+  ],
+  [
+   "UC04",
+   "Buyer support Agent (orders, docs, policy FAQs)",
+   "Customer service",
+   8,
+   8,
+   "P2",
+   "H1"
+  ],
+  [
+   "UC05",
+   "Finance copilot: peer benchmarking & budget scenarios",
+   "Finance",
+   5,
+   9,
+   "P3",
+   "H1"
+  ],
+  [
+   "UC06",
+   "Demand forecasting & capacity planning",
+   "Operations",
+   8,
+   7,
+   "P4",
+   "H1"
+  ],
+  [
+   "UC07",
+   "Supply-disruption decision support (yarn, freight)",
+   "Operations / Sourcing",
+   7,
+   7,
+   "P4",
+   "H1"
+  ],
+  [
+   "UC08",
+   "RFQ & B2B proposal generator",
+   "Sales",
+   8,
+   8,
+   "P5",
+   "H1"
+  ],
+  [
+   "UC09",
+   "Compliance document assistant (DPP, CSDDD, audits)",
+   "Compliance",
+   9,
+   6,
+   null,
+   "H2"
+  ],
+  [
+   "UC10",
+   "Computer-vision fabric & garment defect detection",
+   "Quality",
+   8,
+   4,
+   null,
+   "Deferred"
+  ],
+  [
+   "UC11",
+   "Tamil voice SOP & training assistant for floor staff",
+   "HR / Production",
+   7,
+   6,
+   null,
+   "H2"
+  ],
+  [
+   "UC12",
+   "Export documentation & LC discrepancy checker",
+   "Logistics / Finance",
+   6,
+   7,
+   null,
+   "H3"
+  ],
+  [
+   "UC13",
+   "Bias-checked JDs & resume screening",
+   "HR",
+   4,
+   7,
+   null,
+   "H3"
+  ],
+  [
+   "UC14",
+   "Predictive maintenance for knitting/sewing machines",
+   "Maintenance",
+   6,
+   3,
+   null,
+   null
+  ],
+  [
+   "UC15",
+   "AI costing & quotation assistant (yarn + CMT)",
+   "Merchandising / Finance",
+   8,
+   7,
+   null,
+   "H1"
+  ],
+  [
+   "UC16",
+   "Receivables & FX exposure alerts",
+   "Finance",
+   5,
+   6,
+   null,
+   null
+  ],
+  [
+   "UC17",
+   "Personalised buyer portal 'WeaveWorks Studio' (AI variants + instant quote + traceability)",
+   "Sales / Design",
+   9,
+   6,
+   null,
+   "H2"
+  ]
+ ],
+ "ROI": [
+  {
+   "id": "UC04",
+   "name": "Buyer support Agent",
+   "driver": "Merchandiser hours saved / yr",
+   "unit": "hrs",
+   "unit_value": 0.0045,
+   "vols": [
+    900,
+    1700,
+    2400
+   ],
+   "golive": 3,
+   "months_live": 16,
+   "one_time": 1.8,
+   "run_pm": 0.1,
+   "cost": 3.4000000000000004,
+   "benefit": [
+    5.3999999999999995,
+    10.2,
+    14.399999999999999
+   ],
+   "net": [
+    1.9999999999999991,
+    6.799999999999999,
+    10.999999999999998
+   ],
+   "roi": [
+    0.5882352941176467,
+    1.9999999999999996,
+    3.235294117647058
+   ],
+   "breakeven_driver": 566.6666666666667,
+   "included": true,
+   "pre_shock_golive": 3,
+   "payback_month": [
+    10,
+    6,
+    5
+   ]
+  },
+  {
+   "id": "UC03",
+   "name": "Segmentation & personalised outreach",
+   "driver": "New buyer accounts won / yr",
+   "unit": "accounts",
+   "unit_value": 7.5,
+   "vols": [
+    0.5,
+    1.5,
+    3
+   ],
+   "golive": 3,
+   "months_live": 16,
+   "one_time": 1.4,
+   "run_pm": 0.08,
+   "cost": 2.6799999999999997,
+   "benefit": [
+    5.0,
+    15.0,
+    30.0
+   ],
+   "net": [
+    2.3200000000000003,
+    12.32,
+    27.32
+   ],
+   "roi": [
+    0.8656716417910449,
+    4.597014925373135,
+    10.19402985074627
+   ],
+   "breakeven_driver": 0.26799999999999996,
+   "included": true,
+   "pre_shock_golive": 3,
+   "payback_month": [
+    9,
+    4,
+    3
+   ]
+  },
+  {
+   "id": "UC08",
+   "name": "RFQ & proposal generator",
+   "driver": "Win-rate uplift (percentage points)",
+   "unit": "pp",
+   "unit_value": 3.6,
+   "vols": [
+    0.5,
+    2,
+    4
+   ],
+   "golive": 4,
+   "months_live": 15,
+   "one_time": 1.2,
+   "run_pm": 0.06,
+   "cost": 2.0999999999999996,
+   "benefit": [
+    2.25,
+    9.0,
+    18.0
+   ],
+   "net": [
+    0.15000000000000036,
+    6.9,
+    15.9
+   ],
+   "roi": [
+    0.0714285714285716,
+    3.2857142857142865,
+    7.571428571428573
+   ],
+   "breakeven_driver": 0.46666666666666656,
+   "included": true,
+   "pre_shock_golive": 4,
+   "payback_month": [
+    17,
+    6,
+    5
+   ]
+  },
+  {
+   "id": "UC06",
+   "name": "Demand forecasting (Power BI)",
+   "driver": "Air-freight shipments avoided / yr",
+   "unit": "shipments",
+   "unit_value": 1.6,
+   "vols": [
+    2,
+    5,
+    9
+   ],
+   "golive": 4,
+   "months_live": 15,
+   "one_time": 2.6,
+   "run_pm": 0.08,
+   "cost": 3.8,
+   "benefit": [
+    4.0,
+    10.0,
+    18.0
+   ],
+   "net": [
+    0.20000000000000018,
+    6.2,
+    14.2
+   ],
+   "roi": [
+    0.052631578947368474,
+    1.6315789473684212,
+    3.736842105263158
+   ],
+   "breakeven_driver": 1.9,
+   "included": true,
+   "pre_shock_golive": 4,
+   "payback_month": [
+    17,
+    8,
+    6
+   ]
+  },
+  {
+   "id": "UC15",
+   "name": "Costing & quotation assistant",
+   "driver": "Margin recovered (basis points of revenue)",
+   "unit": "bps",
+   "unit_value": 1.2,
+   "vols": [
+    5,
+    12,
+    25
+   ],
+   "golive": 4,
+   "months_live": 15,
+   "one_time": 2.4,
+   "run_pm": 0.07,
+   "cost": 3.45,
+   "benefit": [
+    7.5,
+    17.999999999999996,
+    37.5
+   ],
+   "net": [
+    4.05,
+    14.549999999999997,
+    34.05
+   ],
+   "roi": [
+    1.1739130434782608,
+    4.217391304347825,
+    9.869565217391303
+   ],
+   "breakeven_driver": 2.3000000000000003,
+   "included": true,
+   "pre_shock_golive": 8,
+   "payback_month": [
+    9,
+    6,
+    4
+   ]
+  },
+  {
+   "id": "UC09",
+   "name": "Compliance document assistant",
+   "driver": "Compliance hours saved / yr",
+   "unit": "hrs",
+   "unit_value": 0.006,
+   "vols": [
+    500,
+    900,
+    1400
+   ],
+   "golive": 7,
+   "months_live": 12,
+   "one_time": 2.4,
+   "run_pm": 0.1,
+   "cost": 3.6,
+   "benefit": [
+    3.0,
+    5.400000000000001,
+    8.4
+   ],
+   "net": [
+    -0.6000000000000001,
+    1.8000000000000012,
+    4.800000000000001
+   ],
+   "roi": [
+    -0.16666666666666669,
+    0.5000000000000003,
+    1.3333333333333335
+   ],
+   "breakeven_driver": 599.9999999999999,
+   "included": true,
+   "pre_shock_golive": 7,
+   "payback_month": [
+    null,
+    13,
+    10
+   ]
+  },
+  {
+   "id": "UC02",
+   "name": "Virtual 3D sampling",
+   "driver": "Physical samples avoided / yr",
+   "unit": "samples",
+   "unit_value": 0.025,
+   "vols": [
+    250,
+    600,
+    1000
+   ],
+   "golive": 7,
+   "months_live": 12,
+   "one_time": 3.6,
+   "run_pm": 0.2,
+   "cost": 6.0,
+   "benefit": [
+    6.25,
+    15.0,
+    25.0
+   ],
+   "net": [
+    0.25,
+    9.0,
+    19.0
+   ],
+   "roi": [
+    0.041666666666666664,
+    1.5,
+    3.1666666666666665
+   ],
+   "breakeven_driver": 239.99999999999994,
+   "included": true,
+   "pre_shock_golive": 10,
+   "payback_month": [
+    18,
+    10,
+    8
+   ]
+  },
+  {
+   "id": "UC11",
+   "name": "Tamil voice SOP assistant",
+   "driver": "Ramp-up days saved per new hire x hires",
+   "unit": "hire-days",
+   "unit_value": 0.004,
+   "vols": [
+    600,
+    1500,
+    2400
+   ],
+   "golive": 9,
+   "months_live": 10,
+   "one_time": 1.8,
+   "run_pm": 0.08,
+   "cost": 2.6,
+   "benefit": [
+    2.0,
+    5.0,
+    8.0
+   ],
+   "net": [
+    -0.6000000000000001,
+    2.4,
+    5.4
+   ],
+   "roi": [
+    -0.23076923076923078,
+    0.923076923076923,
+    2.076923076923077
+   ],
+   "breakeven_driver": 780.0,
+   "included": true,
+   "pre_shock_golive": 9,
+   "payback_month": [
+    null,
+    13,
+    11
+   ]
+  },
+  {
+   "id": "UC10",
+   "name": "CV defect detection (1-line pilot)",
+   "driver": "Rejected pieces avoided / yr",
+   "unit": "pieces",
+   "unit_value": 0.0018,
+   "vols": [
+    3000,
+    8000,
+    14000
+   ],
+   "golive": 14,
+   "months_live": 5,
+   "one_time": 3.4,
+   "run_pm": 0.1,
+   "cost": 3.9,
+   "benefit": [
+    2.2499999999999996,
+    6.0,
+    10.5
+   ],
+   "net": [
+    -1.6500000000000004,
+    2.1,
+    6.6
+   ],
+   "roi": [
+    -0.4230769230769232,
+    0.5384615384615385,
+    1.6923076923076923
+   ],
+   "breakeven_driver": 5200.000000000001,
+   "included": false,
+   "pre_shock_golive": 14,
+   "payback_month": [
+    null,
+    17,
+    15
+   ]
+  },
+  {
+   "id": "UC13",
+   "name": "Bias-checked JDs & screening",
+   "driver": "Recruiter hours saved / yr",
+   "unit": "hrs",
+   "unit_value": 0.004,
+   "vols": [
+    150,
+    300,
+    500
+   ],
+   "golive": 13,
+   "months_live": 6,
+   "one_time": 0.5,
+   "run_pm": 0.03,
+   "cost": 0.6799999999999999,
+   "benefit": [
+    0.3,
+    0.6,
+    1.0
+   ],
+   "net": [
+    -0.37999999999999995,
+    -0.07999999999999996,
+    0.32000000000000006
+   ],
+   "roi": [
+    -0.5588235294117647,
+    -0.11764705882352937,
+    0.4705882352941178
+   ],
+   "breakeven_driver": 339.99999999999994,
+   "included": true,
+   "pre_shock_golive": 13,
+   "payback_month": [
+    null,
+    null,
+    16
+   ]
+  },
+  {
+   "id": "UC17",
+   "name": "Personalised buyer portal (shock response)",
+   "driver": "At-risk revenue retained (Rs crore / yr)",
+   "unit": "Rs cr",
+   "unit_value": 15.0,
+   "vols": [
+    0.5,
+    1.5,
+    3.0
+   ],
+   "golive": 9,
+   "months_live": 10,
+   "one_time": 2.6,
+   "run_pm": 0.12,
+   "cost": 3.8,
+   "benefit": [
+    6.25,
+    18.75,
+    37.5
+   ],
+   "net": [
+    2.45,
+    14.95,
+    33.7
+   ],
+   "roi": [
+    0.6447368421052633,
+    3.9342105263157894,
+    8.86842105263158
+   ],
+   "breakeven_driver": 0.304,
+   "included": true,
+   "pre_shock_golive": null,
+   "payback_month": [
+    14,
+    10,
+    9
+   ]
+  }
+ ],
+ "BUDGET": {
+  "uc_cost": 32.11,
+  "hidden": 11.0,
+  "contingency": 4.5,
+  "total": 47.61,
+  "headroom": 2.3900000000000006
+ },
+ "SHOCK": "Competitor move: the main rival launches AI personalisation and cuts prices 10%.",
+ "RIVAL": "KnitSphere Apparels",
+ "TODAY": "17 November 2026"
+}
