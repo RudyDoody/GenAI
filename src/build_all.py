@@ -18,7 +18,7 @@ PY = [sys.executable]
 
 STEPS = ["gen_data.py", "analysis.py", "export_facts.py", "build_team.py", "build_phase1.py", "creatives.py", "build_p1.py",
          "build_p2.py", "build_p3.py", "build_p4.py", "build_phase3.py", "build_roi.py", "build_governance.py",
-         "build_change_roadmap.py", "build_phase5.py"]
+         "build_change_roadmap.py", "build_phase5.py", "build_agent_page.py"]
 DECKS = ["build_p5_sales_deck.js", "build_board_deck.js"]
 
 

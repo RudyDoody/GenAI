@@ -35,7 +35,7 @@ Names are set once in `src/facts.py` (`TEAM`). To swap roles, swap the names the
 | — | Team charter, RACI, 4-week plan, stand-up log, AI-use register, submission checklist | `00_Team_and_Project_Management/Team_Charter_and_Workplan.docx` |
 | 1 Diagnose | Value chain, 17 use cases, value × feasibility 2x2, 5 picked | `01_Diagnose/Opportunity_Scan.docx` |
 | 2 Build: P1 | Synthetic dataset (300 buyers), 3 segments (k-means), 2 personas, campaign, 3 creatives, 3-email sequence, ads for LinkedIn/Google/Meta | `02_Build/P1_Marketing/` |
-| 2 Build: P2 | No-code Agent: instructions, 9 knowledge files, escalation rules, policy limits, 25-test suite | `02_Build/P2_Customer_Support_Agent/` |
+| 2 Build: P2 | No-code Agent: instructions, 9 knowledge files, escalation rules, policy limits, 25-test suite; **backup live demo** ([Weave Buyer Support](https://claude.ai/artifact/CNcLbDjCa2Smmh5xujpYaD), built from the same files by `src/build_agent_page.py`) | `02_Build/P2_Customer_Support_Agent/` |
 | 2 Build: P3 | AI summary of **S.P. Apparels Ltd** FY2024-25 annual report + verification table; 3-scenario budget | `02_Build/P3_Finance/` |
 | 2 Build: P4 | Demand forecast (Excel formulas + Power BI star schema + DAX variance measure); supply-disruption decision matrix | `02_Build/P4_Operations/` |
 | 2 Build: P5 | B2B proposal deck for the largest segment | `02_Build/P5_Sales/` |
