@@ -57,7 +57,7 @@ highlighted **"Rejected AI output"** box for the viva.
 1. **Build the Agent** in the no-code tool your class uses (Copilot Studio, Custom GPT, Gemini Gem or Botpress).
    Follow `Agent_Build_Pack.docx` §1 and paste `Agent_Instructions.md`. Then run all 25 tests in `Agent_Test_Suite.xlsx`
    and record the results. The go-live gate is computed automatically.
-2. **Rebuild the 3 creatives in Canva.** The PNGs in `P1_Marketing/creatives/` are exact-size mock-ups; the spec (sizes, hex colours, copy) is in the Marketing Pack §5.
+2. **Open the 3 creatives in Canva (2 minutes).** `P1_Marketing/creatives/canva_import/` has each creative as a PDF with editable text and shapes at the exact size (1200×627, 1080×1080, 1200×627 px). In Canva: **Projects → + → Upload files**, pick the three PDFs, open each one to edit, then **Move** it into the folder [WeaveWorks Exports - Group 4 - P1 Marketing Creatives](https://www.canva.com/folder/FAHbuaqQHOs). (Built by `src/build_canva_creatives.js`; Canva's AI design tool is disabled by your Canva team admin, so it could not be done automatically.)
 3. **Verify the peer figures.** Open S.P. Apparels' official Annual Report 2024-25 PDF and fill the "Page ref" column in
    `Finance_Budget_and_Peer.xlsx > Verification`. Our figures were checked against filings, investor materials and
    earnings-call summaries, but not yet against the AR PDF itself.
