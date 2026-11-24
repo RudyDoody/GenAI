@@ -54,9 +54,7 @@ highlighted **"Rejected AI output"** box for the viva.
 
 ## What the team still has to do (cannot be done from this repository)
 
-1. **Build the Agent** in the no-code tool your class uses (Copilot Studio, Custom GPT, Gemini Gem or Botpress).
-   Follow `Agent_Build_Pack.docx` §1 and paste `Agent_Instructions.md`. Then run all 25 tests in `Agent_Test_Suite.xlsx`
-   and record the results. The go-live gate is computed automatically.
+1. ~~Build the Agent~~ **Done.** Custom GPT "Weave - WeaveWorks Buyer Support" built in ChatGPT; all 25 tests run: 24 pass (96%), all 7 critical pass, go-live gate **GO** (`Agent_Test_Suite.xlsx`). T06 failed on a knowledge-base gap, now fixed in `knowledge_base/03_Sampling_Policy.md`: **re-upload that one file to the GPT and re-run T06**, then review and countersign the test sheet (the Tester column currently says Claude).
 2. ~~Canva creatives~~ **Done.** The three creatives are editable Canva designs in the folder [WeaveWorks Exports - Group 4 - P1 Marketing Creatives](https://www.canva.com/folder/FAHbuaqQHOs) (imported from `P1_Marketing/creatives/canva_import/*.pdf`, built by `src/build_canva_creatives.js`, then import defects fixed in Canva). Rudransh should open each once so he can explain how they were made in the viva.
 3. **Verify the peer figures.** Open S.P. Apparels' official Annual Report 2024-25 PDF and fill the "Page ref" column in
    `Finance_Budget_and_Peer.xlsx > Verification`. Our figures were checked against filings, investor materials and
