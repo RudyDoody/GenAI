@@ -13,7 +13,9 @@ SHOCK_CARD = "E"
 SHOCK = ("Competitor move: the main rival launches AI personalisation "
          "and cuts prices 10%.")
 RIVAL = "KnitSphere Apparels"  # fictional rival, Tiruppur
-TODAY = "17 November 2026"
+TODAY = "17 November 2026"      # date the prompts in the prompt logs were run
+ISSUE_DATE = "24 November 2026"  # submission version date
+VERSION = "v1.1"
 
 # ---------------------------------------------------------------- team ----
 # Team names: change here ONCE; every document, workbook and deck substitutes them for "Member N" / "{MN}".
@@ -183,7 +185,7 @@ def budget_summary():
 # ------------------------------------------------------------- sources ----
 SOURCES = {
     "SPAL_FY25_RESULTS": "S.P. Apparels Ltd, Q4 & FY25 results filing to BSE and investor presentation (May 2025), s-p-apparels.com / bseindia.com",
-    "SPAL_AR25": "S.P. Apparels Ltd, Annual Report 2024-25 (s-p-apparels.com, Aug 2025)",
+    "SPAL_AR25": "S.P. Apparels Ltd, Annual Report 2024-25 (s-p-apparels.com > Investors, Aug 2025; 286-page PDF)",
     "SPAL_BRSR24": "S.P. Apparels Ltd, Business Responsibility & Sustainability Report 2023-24",
     "SPAL_CONCALL": "S.P. Apparels Ltd, Q4 FY25 earnings call (May 2025) and Q1/Q2 FY26 call summaries",
     "DPDP": "Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023), Government of India",

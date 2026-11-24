@@ -52,18 +52,42 @@ Names are set once in `src/facts.py` (`TEAM`). To swap roles, swap the names the
 Every prototype document has a **"Prompt log"** section (prompt → raw AI output → human-edited version → why) and a
 highlighted **"Rejected AI output"** box for the viva.
 
-## What the team still has to do (cannot be done from this repository)
+## Submission status
 
-1. ~~Build the Agent~~ **Done.** Custom GPT "Weave - WeaveWorks Buyer Support" built in ChatGPT; all 25 tests run: 24 pass (96%), all 7 critical pass, go-live gate **GO** (`Agent_Test_Suite.xlsx`). T06 failed on a knowledge-base gap, now fixed in `knowledge_base/03_Sampling_Policy.md`: **re-upload that one file to the GPT and re-run T06**, then review and countersign the test sheet (the Tester column currently says Claude).
-2. ~~Canva creatives~~ **Done.** The three creatives are editable Canva designs in the folder [WeaveWorks Exports - Group 4 - P1 Marketing Creatives](https://www.canva.com/folder/FAHbuaqQHOs) (imported from `P1_Marketing/creatives/canva_import/*.pdf`, built by `src/build_canva_creatives.js`, then import defects fixed in Canva). Rudransh should open each once so he can explain how they were made in the viva.
-3. **Verify the peer figures.** Open S.P. Apparels' official Annual Report 2024-25 PDF and fill the "Page ref" column in
-   `Finance_Budget_and_Peer.xlsx > Verification`. Our figures were checked against filings, investor materials and
-   earnings-call summaries, but not yet against the AR PDF itself.
-4. **Build the Power BI page** from `P4_Operations/powerbi_data/*.csv` using `DAX_Measures.md`. A .pbix cannot be generated here.
-5. **Record backup videos** of both live demos the day before the pitch.
-6. **Prompt logs:** the raw outputs were generated with Claude when this pack was drafted. If your instructor wants logs
-   from your own tools, re-run the prompts (written out in full) and keep the edit rationale.
-7. Fill in the weekly stand-up log (Team Charter §4).
+**Ready to submit:** `06_Submission/00_WeaveWorks_Group4_Complete_Submission.pdf` (all documents and both decks in the brief's order,
+75 pages), plus the individual PDFs `01_…` to `15_…` in the same folder. Spreadsheets (`*.xlsx`) and data files stay in their phase folders;
+attach them too if your instructor wants the working models.
+
+| Requirement | Status |
+|---|---|
+| Phase 1 opportunity scan + 2x2 | Done |
+| P1 Marketing (dataset, segments, personas, campaign, 3 Canva creatives, emails, ads) | Done; creatives in [Canva folder](https://www.canva.com/folder/FAHbuaqQHOs) |
+| P2 Support Agent (no-code) + testing | Done: Custom GPT built, 24/25 pass, critical 7/7, gate **GO**; backup demo [Weave Buyer Support](https://claude.ai/artifact/CNcLbDjCa2Smmh5xujpYaD) |
+| P3 Finance (peer summary + verification + 3-scenario budget) | Done: all 12 claims checked against the official Annual Report 2024-25 with page refs |
+| P4 Operations (forecast + DAX variance + decision matrix) | Done in Excel with live formulas; Power BI page optional (steps below) |
+| P5 Sales proposal deck | Done |
+| Phase 3 shock response; Phase 4 ROI, governance, ADKAR, roadmap | Done |
+| Phase 5 board deck, Q&A prep, scorecard, viva prep | Done |
+
+## Steps only you can do (on your laptop / accounts)
+
+1. **Re-test T06 on the Custom GPT (5 min).** In `Documents\GenAI` run `git pull`. In ChatGPT open *Weave - WeaveWorks Buyer Support* → Edit →
+   Configure → Knowledge: delete `03_Sampling_Policy.md`, upload the new one from `02_Build\P2_Customer_Support_Agent\knowledge_base\`, Update.
+   New chat → "How long does sampling take?" → expect *21 working days* (and 10 for Studio from Q3 2027). In `Agent_Test_Suite.xlsx` set T06 to
+   Pass, paste the reply, and put **your name** in the Tester column for every row you have reviewed (it currently says Claude). Commit and push.
+2. **Share the links** (each is private until you share): the Canva folder (Share → anyone with link can view) and the backup demo page (Share menu).
+3. **Record the two demo backups (10 min), the day before the pitch.** Windows: press **Win + Alt + R** (Xbox Game Bar) to start/stop recording.
+   Demo 1: Custom GPT, new chat each for T01, T02, T11, T10 (script: `Panel_QA_Demo_and_Run_of_Show.docx` §2). Demo 2: open
+   `Demand_Forecast_and_Supply_Decision.xlsx` → *Variance* and *Forward* sheets (or the Power BI page). Save the videos next to the deck.
+4. **Optional, Power BI page (20 min).** Power BI Desktop → Get data → Text/CSV → the four files in `02_Build\P4_Operations\powerbi_data\`;
+   set relationships and paste the measures from `DAX_Measures.md`; build the 3 visuals listed there; save as `P4_Forecast.pbix` in that folder.
+   The brief accepts Excel, which is already done.
+5. **Stand-up log.** Fill weeks 2-4 in the Team Charter (§4) with what was actually discussed in your instructor stand-ups. Do not invent entries.
+6. **Prompt logs.** The raw outputs were generated with Claude while drafting. If your instructor wants logs from your own tools, re-run the
+   prompts (written in full in each document) and keep the edit rationale.
+7. **Rehearse.** Run the 15-minute pitch twice with the timings in the speaker notes, and practise each viva page out loud.
+
+After steps 1 and 5, rebuild the PDFs with `python src/build_submission.py` (needs LibreOffice) or simply export the two changed files to PDF.
 
 ## Ground rules: how we comply
 

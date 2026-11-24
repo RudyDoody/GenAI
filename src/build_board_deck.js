@@ -85,7 +85,7 @@ const ebitda = F.CO.revenue_cr * F.CO.ebitda_margin;
   const pr = [
     [fa.FaBullhorn, "P1 Marketing", "3 buyer segments from 300 synthetic accounts; 2 personas; 'Traceable by Design' campaign, 3 creatives, 3-email flow, ad copy", "Member 1"],
     [fa.FaRobot, "P2 Support Agent", "No-code Agent on 9 knowledge files; 7 escalation triggers; zero money authority; 25-test suite", "Member 2"],
-    [fa.FaCoins, "P3 Finance", "AI summary of S.P. Apparels' FY25 annual report: 12 claims checked, 5 corrected; 3-scenario budget", "Member 3"],
+    [fa.FaCoins, "P3 Finance", "AI summary of S.P. Apparels' FY25 annual report: 12 claims checked, 6 corrected; 3-scenario budget", "Member 3"],
     [fa.FaChartLine, "P4 Operations", "Forecast in Excel and Power BI with a DAX variance measure; supply-disruption decision matrix", "Member 4"],
     [fa.FaHandshake, "P5 Sales", "B2B proposal deck for our largest segment, with a total-cost answer to the 10% price cut", "Member 1"],
   ];
@@ -97,7 +97,7 @@ const ebitda = F.CO.revenue_cr * F.CO.ebitda_margin;
     text(s, pr[i][2], { x: x + 0.25, y: 3.2, w: 1.85, h: 2.6, fontSize: 13, color: HEX.ink2 });
     text(s, "Owner: " + pr[i][3], { x: x + 0.25, y: 5.95, w: 1.9, h: 0.35, fontSize: 12, bold: true, color: HEX.teal });
   }
-  notes(s, "[Member 4, 3:30-4:15] One line each. The finance prototype's best result was catching the AI's mistakes: a 40% error rate in the raw draft.");
+  notes(s, "[Member 4, 3:30-4:15] One line each. The finance prototype's best result was catching the AI's mistakes: 6 of 12 claims in the raw draft were wrong.");
 
   // 6 Demo
   s = pres.addSlide({ masterName: "SECTION", sectionTitle: "What we built" });

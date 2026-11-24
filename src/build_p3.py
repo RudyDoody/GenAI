@@ -22,30 +22,30 @@ SUMMARY = [
      "retail division small and soft (FY25 about Rs 79 crore vs Rs 83 crore)."),
     ("Risks named", "Cotton and yarn price volatility (stable in FY25 per management); currency (hedged with forwards); tariff uncertainty delaying "
      "India capacity expansion; integration of acquisitions; retail weakness."),
-    ("ESG", "About 82% of electricity from renewable sources (FY25 BRSR); exports were about 92% of turnover (FY24 BRSR)."),
+    ("ESG", "About 82% of electricity from renewable sources (FY25 BRSR); exports were about 93% of turnover (FY25 BRSR)."),
 ]
 
-# claim, AI draft said, verified value, source key, status
+# claim, AI draft said, verified value, source key, status, page ref in official AR 2024-25 PDF (286 pages)
 VERIFY = [
-    ("Consolidated total income FY25", "Rs 1,407 crore", "Rs 1,407.3 crore (Rs 14,073 mn)", "SPAL_FY25_RESULTS", "Verified (2 sources agree)"),
-    ("Revenue growth FY25 vs FY24", "+27.5%", "+27.5% (Rs 14,073 mn vs Rs 11,037 mn)", "SPAL_FY25_RESULTS", "Verified"),
-    ("Revenue from operations FY25", "(not stated)", "About Rs 1,395 crore (Rs 13,951 mn) - differs from total income by other income", "SPAL_AR25", "Added - check AR P&L page"),
-    ("Consolidated PAT FY25", "Rs 83.5 crore", "Rs 95.1 crore consolidated; Rs 83.5 crore is STANDALONE", "SPAL_AR25", "CORRECTED - AI mixed bases"),
-    ("EBITDA margin FY25", "16.7%", "About 14.2% consolidated (Rs 200 cr / Rs 1,407 cr); 16.7% is management's adjusted figure", "SPAL_CONCALL", "CORRECTED - basis clarified"),
-    ("EPS FY25", "Rs 37.88", "Rs 37.88 (FY24 Rs 35.69) per aggregator; confirm in AR", "SPAL_AR25", "Unverified in primary source"),
-    ("Debt position", "'Virtually debt-free'", "Debt-to-equity about 0.30 (FY24 about 0.16)", "SPAL_AR25", "CORRECTED - AI claim false"),
-    ("Order book", "Rs 442 crore", "Rs 442 crore at FY25 call (garment division later Rs 404 crore in Q1 FY26)", "SPAL_CONCALL", "Verified (management statement, not audited)"),
-    ("Renewable electricity share", "82%", "82% of electrical energy from renewables (FY25 BRSR)", "SPAL_AR25", "Verified"),
-    ("Export share of turnover", "'About 95%'", "92% (FY24 BRSR); FY25 figure to be checked", "SPAL_BRSR24", "CORRECTED - year and value"),
-    ("India-UK FTA", "'In force since 2024'", "Signed July 2025; in force only after ratification", "INDIA_UK_FTA", "CORRECTED - date"),
-    ("Retail division revenue", "Rs 79.4 crore", "Rs 79.4 crore FY25 vs Rs 82.9 crore FY24 (earnings call)", "SPAL_CONCALL", "Verified (management statement)"),
+    ("Consolidated total income FY25", "Rs 1,407 crore", "Rs 1,407.3 crore (Rs 14,073.26 mn)", "SPAL_AR25", "Verified", "p.10 (Directors' Report); p.12; p.186 (consol. P&L)"),
+    ("Revenue growth FY25 vs FY24", "+27.5%", "+27.5% (Rs 14,073.3 mn vs Rs 11,036.7 mn)", "SPAL_AR25", "Verified", "p.10"),
+    ("Revenue from operations FY25", "(not stated)", "Rs 1,395.1 crore (Rs 13,951.34 mn); total income includes other income", "SPAL_AR25", "Added", "p.12; p.186"),
+    ("Consolidated PAT FY25", "Rs 83.5 crore", "Rs 95.1 crore consolidated (Rs 951.02 mn); Rs 83.5 crore is STANDALONE", "SPAL_AR25", "CORRECTED - AI mixed bases", "p.10; p.12; p.186"),
+    ("EBITDA margin FY25", "16.7%", "14.2% consolidated (EBITDA Rs 2,000.0 mn / Rs 14,073.3 mn); 16.7% is management's adjusted figure", "SPAL_AR25", "CORRECTED - basis clarified", "p.10"),
+    ("EPS FY25", "Rs 37.88", "Rs 37.90 basic and diluted (FY24 Rs 35.72)", "SPAL_AR25", "CORRECTED - minor", "p.10; p.187"),
+    ("Debt position", "'Virtually debt-free'", "Debt-equity ratio 0.30 (FY24 0.16), up on new term loans and working capital", "SPAL_AR25", "CORRECTED - AI claim false", "p.11 (Key Ratios)"),
+    ("Order book", "Rs 442 crore", "Rs 442 crore (Chairman's message)", "SPAL_AR25", "Verified", "p.5"),
+    ("Renewable electricity share", "82%", "82% of total power consumption from windmills and rooftop solar", "SPAL_AR25", "Verified", "p.70 (BRSR)"),
+    ("Export share of turnover", "'About 95%'", "About 93% of total turnover (FY25 BRSR)", "SPAL_AR25", "CORRECTED - value", "p.38 (BRSR)"),
+    ("India-UK FTA", "'In force since 2024'", "Report calls it 'recent'; signed July 2025, in force only after ratification", "INDIA_UK_FTA", "CORRECTED - date", "p.5; p.8"),
+    ("Retail division revenue", "Rs 79.4 crore", "Rs 79.4 crore FY25 vs Rs 82.9 crore FY24 (SP Retail Ventures)", "SPAL_AR25", "Verified", "p.5"),
 ]
 
 BENCH = [
     ("Revenue (Rs crore)", "about 1,407", f"{facts.CO['revenue_cr']:.0f}", "Peer is ~12x our size: compare ratios, not absolutes"),
     ("EBITDA margin", "about 14%", f"{facts.CO['ebitda_margin']:.0%} (assumed)", "Our 5-point gap = Rs 6 crore a year; costing (UC15) and sampling (UC02) attack it"),
     ("PAT margin", "about 6.8%", f"{facts.CO['pat_margin']:.1%} (assumed)", "Thin margin: the AI budget must pay back inside 18 months in the base case"),
-    ("Export share", "about 92% (FY24)", f"{facts.CO['export_share']:.0%} (assumed)", "Both fully exposed to EU/UK buyer rules"),
+    ("Export share", "about 93%", f"{facts.CO['export_share']:.0%} (assumed)", "Both fully exposed to EU/UK buyer rules"),
     ("Renewable electricity", "82%", "about 30% (assumed)", "EU buyers ask for this; a data point the compliance assistant (UC09) must report"),
     ("Capex / expansion", "Salem, dyeing, Sri Lanka", "None planned", "We cannot win on scale; we must win on speed, data and service"),
 ]
@@ -57,9 +57,9 @@ LOG = [
          raw="'S.P. Apparels reported revenue of Rs 1,407 crore (+27.5%) and net profit of Rs 83.5 crore. EBITDA margin was a healthy 16.7%. "
              "The company is virtually debt-free and exports about 95% of turnover. The India-UK FTA, in force since 2024, ...'",
          edited="See section 1 summary: consolidated PAT Rs 95.1 crore; EBITDA about 14% consolidated (16.7% is adjusted); D/E about 0.30; "
-                "exports 92% (FY24); FTA signed July 2025.",
+                "exports about 93%; FTA signed July 2025.",
          why="Despite the instruction, the model mixed standalone PAT with consolidated revenue, took management's adjusted margin as reported, "
-             "and asserted 'debt-free' and an FTA date that are false. Five of twelve claims needed correction (see verification table)."),
+             "and asserted 'debt-free' and an FTA date that are false. Six of twelve claims needed correction (see verification table)."),
     dict(title="Build the budget scenarios",
          prompt="For a Rs 50 lakh, 18-month Gen-AI programme at an Indian SME exporter, suggest realistic cost-overrun and saving percentages "
                 "for a pessimistic and an optimistic budget scenario, by cost type (implementation, licences, training, oversight).",
@@ -77,24 +77,22 @@ def doc():
             "Member 3 - Chief Financial Officer", "P3-Finance")
     d.callout(["**Why this peer:** S.P. Apparels is a listed knitwear exporter from the same Tiruppur cluster, selling to the same EU/UK "
                "buyers. Its annual report is public, so it is a fair benchmark for WeaveWorks (fictional).",
-               "**How we worked:** (1) an AI tool drafted the summary; (2) the CFO checked every figure against the company's filings and "
-               "investor materials; (3) corrections are logged below. Rule: no AI number goes into a board paper unless it is verified."],
+               "**How we worked:** (1) an AI tool drafted the summary; (2) the CFO checked every figure against the official Annual Report "
+               "2024-25; (3) corrections are logged below. Rule: no AI number goes into a board paper unless it is verified."],
               kind="info", title="Summary")
     d.h1("1. Verified summary (FY2024-25)")
     d.table(["Topic", "What the annual report and results say (verified version)"], SUMMARY, widths=[3.0, 14.0], size=8.8, first_col_bold=True)
     d.h1("2. Verification table")
-    d.table(["#", "Claim", "AI draft said", "Verified value", "Source", "Status"],
-            [(i, c, a, v, s.replace("_", " "), st) for i, (c, a, v, s, st) in enumerate(VERIFY, 1)],
-            widths=[0.6, 3.2, 2.6, 5.4, 2.2, 3.0], size=7.8)
+    d.table(["#", "Claim", "AI draft said", "Verified value", "Status", "Page (AR PDF)"],
+            [(i, c, a, v, st, pg) for i, (c, a, v, s, st, pg) in enumerate(VERIFY, 1)],
+            widths=[0.6, 3.0, 2.4, 5.4, 2.6, 3.0], size=7.8)
     n_corr = sum("CORRECTED" in v[4] for v in VERIFY)
-    d.p(f"**Result:** {len(VERIFY)} claims checked; {n_corr} corrected; 1 added; 1 still needs the primary-source page. "
-        "**Error rate of the raw AI draft: about 40%.** That is why every AI number has a named human owner.")
-    d.callout(["Our verification used the company's results filing, investor presentation, earnings-call commentary and BRSR, as "
-               "reported by financial data sites. Before submission, the CFO must open the official Annual Report 2024-25 PDF "
-               "(s-p-apparels.com > Investors, or BSE scrip 540048) and write the page number next to each figure in the 'Page ref' column "
-               "of Finance_Budget_and_Peer.xlsx > 'Verification'.",
-               "Abbreviations: SPAL_FY25_RESULTS, SPAL_AR25, SPAL_CONCALL, SPAL_BRSR24 = see source list at the end."],
-              kind="warn", title="Remaining check before submission")
+    d.p(f"**Result:** {len(VERIFY)} claims checked against the official Annual Report 2024-25: {n_corr} corrected, 1 added, "
+        f"{sum(v[4] == 'Verified' for v in VERIFY)} confirmed. **Error rate of the raw AI draft: {n_corr} of {len(VERIFY)} claims.** "
+        "That is why every AI number has a named human owner.")
+    d.callout("Every figure was checked against the official S.P. Apparels Annual Report 2024-25 (286-page PDF, s-p-apparels.com, Investors). "
+              "Page numbers are PDF page numbers. The FTA signing date comes from government sources, since the report only calls it 'recent'.",
+              kind="ok", title="Primary-source check complete")
     d.h1("3. What the benchmark means for WeaveWorks")
     d.table(["Metric", "S.P. Apparels FY25", "WeaveWorks", "So what"], BENCH, widths=[3.2, 3.2, 2.8, 7.8], size=8.5, first_col_bold=True)
     d.h1("4. Three-scenario AI budget (Rs 50 lakh, 18 months)")
@@ -215,13 +213,12 @@ def xlsx():
 
     # ------------------------------------------------ Verification
     v = wb.create_sheet("Verification")
-    title(v, f"Peer annual-report verification - {PEER}", "CFO fills 'Page ref' from the official Annual Report 2024-25 PDF.")
+    title(v, f"Peer annual-report verification - {PEER}", "Checked against the official Annual Report 2024-25 PDF (286 pages); page refs are PDF page numbers.")
     header(v, 4, ["#", "Claim", "AI draft said", "Verified value", "Source", "Status", "Page ref (AR 2024-25)", "Checked by"])
-    for i, (c, ai, val, s, st) in enumerate(VERIFY, 1):
+    for i, (c, ai, val, s, st, pg) in enumerate(VERIFY, 1):
         r = 4 + i
-        for j, x in enumerate((i, c, ai, val, facts.SOURCES[s], st)):
+        for j, x in enumerate((i, c, ai, val, facts.SOURCES[s], st, pg)):
             cell(v, r, j + 1, x, wrap=True, color="000000")
-        cell(v, r, 7, None, fill=INPUT_FILL)
         cell(v, r, 8, "Member 3 (CFO)", color="000000")
     widths(v, [4, 24, 20, 36, 40, 22, 14, 14])
     p = P3 / "Finance_Budget_and_Peer.xlsx"

@@ -81,7 +81,7 @@ VIVA = [
                   "and invites buyers to push the bot. The limit is zero.",
          qs=["What if the bot promises a refund anyway?", "Does DPDP apply to a B2B exporter?", "How do you stop prompt injection?",
              "Why not ban ChatGPT outright?", "Which group is most affected and why?"]),
-    dict(m=facts.TEAM[2], sixty="I own the numbers. I had AI summarise S.P. Apparels' FY25 annual report, then checked every claim: 5 of 12 were wrong. "
+    dict(m=facts.TEAM[2], sixty="I own the numbers. I had AI summarise S.P. Apparels' FY25 annual report, then checked every claim against the official report: 6 of 12 were wrong. "
          "I built the three-scenario budget and the ROI model for every use case, with break-even points and payback months.",
          numbers=[f"Committed Rs {BS['total']:.2f} lakh; reserve Rs {BS['headroom']:.2f} lakh", f"Hidden costs Rs {BS['hidden']:.1f} lakh + contingency Rs {BS['contingency']:.1f} lakh",
                   f"Programme ROI {(BEN[0]-BS['total'])/BS['total']:.0%} / {(BEN[1]-BS['total'])/BS['total']:.0%} / {(BEN[2]-BS['total'])/BS['total']:.0%}",

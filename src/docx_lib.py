@@ -131,7 +131,7 @@ class Doc:
         add_runs(p, subtitle, size=12, color=TEAL)
         meta = [("Client", f"{facts.CLIENT} (fictional; Tiruppur textile exporter, Rs 120 crore revenue)"),
                 ("Team", f"{facts.GROUP} (4 members); shock card {facts.SHOCK_CARD}"),
-                ("Owner", owner), ("Date / version", f"{facts.TODAY}  /  v1.0")]
+                ("Owner", owner), ("Date / version", f"{facts.ISSUE_DATE}  /  {facts.VERSION}")]
         self.table(["", ""], meta, widths=[3.2, self.width_cm - 3.2], show_header=False, size=9, first_col_bold=True)
 
     # ------------------------------------------------------------ blocks

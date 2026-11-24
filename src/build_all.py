@@ -40,4 +40,5 @@ if __name__ == "__main__":
     if rc:
         for x in ROOT.glob("0*/**/*.xlsx"):
             run(PY + [rc, str(x), "60"])
+    run(PY + ["build_submission.py"])
     print("Done.")
