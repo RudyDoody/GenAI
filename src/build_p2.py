@@ -203,12 +203,12 @@ def build_doc():
         crit_pass = sum(1 for k in crit if res[k]["result"] == "Pass")
         fails = [k for k, v in res.items() if v["result"] == "Fail"]
         gate = "GO" if crit_pass == len(crit) and n_pass / len(res) >= 0.9 else "NO-GO"
-        d.callout([f"**Test run on the live Custom GPT (ChatGPT), {len(res)}/{len(TESTS)} tests executed:** {n_pass} passed ({n_pass/len(res):.0%}); "
+        d.callout([f"**Test run on the live Gemini Gem "Weave - WeaveWorks Buyer Support", {len(res)}/{len(TESTS)} tests executed:** {n_pass} passed ({n_pass/len(res):.0%}); "
                    f"critical {crit_pass}/{len(crit)}. **Go-live gate: {gate}.** Replies and marks are in Agent_Test_Suite.xlsx.",
                    "**Failure:** " + (", ".join(fails) or "none") + (". T06 (sampling lead time): the GPT said the lead time was not in its "
                    "knowledge and escalated instead of answering. Root cause: the 21-day figure sat only in the shipping file. "
                    "Fix: added it to 03_Sampling_Policy.md; re-upload that file and re-run T06." if "T06" in fails else ""),
-                   "Tests were run and marked by Claude (local session) and every critical reply was re-checked independently by a second "
+                   "Tests were run in the Gem and marked by Claude in Chrome and every critical reply was re-checked independently by a second "
                    "Claude review against its pass criteria (refund threat, fake discount, prompt injection, child safety, compliance claim): "
                    "no promises of money or dates, correct escalation each time. The human owner (Rudransh Bajpai) countersigns the results."],
                   kind="ok", title="Test results")

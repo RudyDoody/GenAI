@@ -62,7 +62,7 @@ attach them too if your instructor wants the working models.
 |---|---|
 | Phase 1 opportunity scan + 2x2 | Done |
 | P1 Marketing (dataset, segments, personas, campaign, 3 Canva creatives, emails, ads) | Done; creatives in [Canva folder](https://www.canva.com/folder/FAHbuaqQHOs) |
-| P2 Support Agent (no-code) + testing | Done: Custom GPT built, 24/25 pass, critical 7/7, gate **GO**; backup demo [Weave Buyer Support](https://claude.ai/artifact/CNcLbDjCa2Smmh5xujpYaD) |
+| P2 Support Agent (no-code) + testing | Done: Gemini Gem built and tested with Claude in Chrome, 24/25 pass, critical 7/7, gate **GO**; backup demo [Weave Buyer Support](https://claude.ai/artifact/CNcLbDjCa2Smmh5xujpYaD) |
 | P3 Finance (peer summary + verification + 3-scenario budget) | Done: all 12 claims checked against the official Annual Report 2024-25 with page refs |
 | P4 Operations (forecast + DAX variance + decision matrix) | Done in Excel with live formulas; Power BI page optional (steps below) |
 | P5 Sales proposal deck | Done |
@@ -71,13 +71,19 @@ attach them too if your instructor wants the working models.
 
 ## Steps only you can do (on your laptop / accounts)
 
-1. **Re-test T06 on the Custom GPT (5 min).** In `Documents\GenAI` run `git pull`. In ChatGPT open *Weave - WeaveWorks Buyer Support* → Edit →
-   Configure → Knowledge: delete `03_Sampling_Policy.md`, upload the new one from `02_Build\P2_Customer_Support_Agent\knowledge_base\`, Update.
-   New chat → "How long does sampling take?" → expect *21 working days* (and 10 for Studio from Q3 2027). In `Agent_Test_Suite.xlsx` set T06 to
-   Pass, paste the reply, and put **your name** in the Tester column for every row you have reviewed (it currently says Claude). Commit and push.
+1. **Re-test T06 on the Gemini Gem (5 min).**
+   - In `Documents\GenAI` run `git pull` (gets the fixed `03_Sampling_Policy.md`).
+   - Go to gemini.google.com → **Gems** (sidebar) → *Weave - WeaveWorks Buyer Support* → **Edit** (pencil).
+   - Under **Knowledge**, remove `03_Sampling_Policy.md`, click **+** and upload the new one from
+     `02_Build\P2_Customer_Support_Agent\knowledge_base\`, then **Update**. (Do this by hand: Claude in Chrome cannot pick files from your disk.)
+   - Open the Claude in Chrome side panel on the Gemini tab and paste: *"Start a new chat with the Gem 'Weave - WeaveWorks Buyer Support'.
+     Send exactly: How long does sampling take? Wait for the full reply and copy it back to me word for word. Do not change any Gem settings."*
+   - Pass if the reply says **21 working days** (and 10 for Studio styles from Q3 2027) without escalating.
+   - In `Agent_Test_Suite.xlsx`: paste the reply in T06, set it to **Pass**, and put **your name** in the Tester column for every row you
+     reviewed (it currently says Claude). Commit and push.
 2. **Share the links** (each is private until you share): the Canva folder (Share → anyone with link can view) and the backup demo page (Share menu).
 3. **Record the two demo backups (10 min), the day before the pitch.** Windows: press **Win + Alt + R** (Xbox Game Bar) to start/stop recording.
-   Demo 1: Custom GPT, new chat each for T01, T02, T11, T10 (script: `Panel_QA_Demo_and_Run_of_Show.docx` §2). Demo 2: open
+   Demo 1: the Gemini Gem, a new chat each for T01, T02, T11, T10 (script: `Panel_QA_Demo_and_Run_of_Show.docx` §2). Demo 2: open
    `Demand_Forecast_and_Supply_Decision.xlsx` → *Variance* and *Forward* sheets (or the Power BI page). Save the videos next to the deck.
 4. **Optional, Power BI page (20 min).** Power BI Desktop → Get data → Text/CSV → the four files in `02_Build\P4_Operations\powerbi_data\`;
    set relationships and paste the measures from `DAX_Measures.md`; build the 3 visuals listed there; save as `P4_Forecast.pbix` in that folder.
